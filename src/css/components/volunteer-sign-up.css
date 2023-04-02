@@ -1,0 +1,31 @@
+.volunteer-sign-up .container {
+  background: rgba(0, 0, 0, 0.5) url(../../imgs/volunteer-sign-up-image.jpg);
+  background-blend-mode: darken;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.volunteer-sign-up .container p {
+  font-size: 58px;
+}
+
+.volunteer-sign-up .container hr {
+  width: 150px;
+  border: 3px solid #74cf0b;
+  opacity: 1;
+}
+
+.volunteer-sign-up .container a {
+  color: white;
+  background-color: #74cf0b;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .volunteer-sign-up .container p {
+    font-size: 40px;
+  }
+}

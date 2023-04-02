@@ -1,0 +1,85 @@
+body.admin-bar .home-banner {
+  margin-top: 32px;
+}
+
+.home-banner,
+.home-banner .owl-carousel div img,
+.home-banner-overlay {
+  height: 100vh;
+}
+
+.home-banner .owl-carousel div img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.home-banner .owl-carousel div.active img {
+  animation-duration: 15s;
+  animation-fill-mode: both;
+  animation-name: move;
+  animation-direction: alternate;
+  transform-origin: middle center;
+}
+
+@keyframes move {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+.home-banner .home-banner-overlay {
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+body.admin-bar .home-banner .home-banner-overlay {
+  margin-top: 25px;
+}
+
+body.admin-bar .home-banner .home-banner-overlay .banner-content {
+  padding-top: 32px;
+}
+
+.home-banner .home-banner-overlay .banner-text {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.home-banner .home-banner-overlay .banner-buttons button {
+  background-color: #74cf0b;
+}
+
+.home-banner .home-banner-overlay .banner-buttons a {
+  background-color: #000000;
+}
+
+.home-banner .home-banner-overlay .banner-buttons button:hover,
+.home-banner .home-banner-overlay .banner-buttons a:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.banner-content {
+  width: 75%;
+}
+
+@media screen and (min-width: 768px) {
+  .banner-content {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home-banner,
+  .home-banner .owl-carousel div img,
+  .home-banner-overlay {
+    height: 100vh;
+  }
+
+  .home-banner .banner-content h1 {
+    margin-top: 100px;
+    font-size: 38px;
+  }
+}

@@ -1,0 +1,34 @@
+.breadcrumbs img {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+.breadcrumbs .content {
+  margin: auto;
+  text-align: center;
+}
+
+.breadcrumbs .content .content-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.breadcrumbs .content .content-links span {
+  color: #74cf0b;
+  font-size: 20px;
+}
+
+.breadcrumbs .content .content-links svg {
+  color: #ffffff;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .breadcrumbs h1 {
+    font-size: 38px;
+  }
+}

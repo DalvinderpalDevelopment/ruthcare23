@@ -1,0 +1,12 @@
+.no-page h1 {
+  font-size: 96px;
+  color: #74cf0b;
+}
+
+.no-page a {
+  color: white;
+  background-color: #74cf0b;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}

@@ -1,0 +1,106 @@
+/* ================================================== */
+/* Navigation */
+/* ================================================== */
+
+body.admin-bar header {
+  top: 32px;
+}
+
+header {
+  z-index: 2;
+  transition: background-color 0.2s ease-in-out;
+  top: 0;
+}
+
+nav .menu-main-menu-container ul {
+  display: flex;
+}
+
+.menu-main-menu-container ul li {
+  padding: 15px 20px;
+  list-style: none;
+}
+
+.menu-main-menu-container ul li a,
+.error404 .mobile-content .menu-main-menu-container ul li a {
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s linear;
+}
+
+.error404 .menu-main-menu-container ul li a,
+.error404 .menu-main-menu-container ul li:hover a,
+.shadow .menu-main-menu-container ul li:hover a,
+.shadow .menu-main-menu-container ul li.current_page_item a {
+  color: black;
+}
+
+.menu-main-menu-container ul li.current_page_item,
+.menu-main-menu-container ul li:hover {
+  color: white;
+  border-bottom: 2px solid #74cf0b;
+}
+
+.menu-main-menu-container ul li:hover a,
+.error404 .mobile-content .menu-main-menu-container ul li:hover a {
+  color: white;
+}
+
+.menu-main-menu-container ul li.current_page_item a {
+  color: rgba(255, 255, 255, 1);
+  transition: color 0.2s linear;
+}
+
+nav .donate {
+  background-color: #74cf0b;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  margin-top: -15px;
+  height: max-content;
+  margin-left: 15px;
+}
+
+nav .hamburger {
+  display: none;
+}
+
+nav .hamburger .hamburger-icon button {
+  height: 30px;
+  background-color: transparent;
+}
+
+nav .hamburger .hamburger-icon span {
+  width: 25px;
+  height: 3px;
+  display: block;
+  background-color: white;
+  border-radius: 25px;
+  margin: 5px 0;
+}
+
+nav .hamburger .hamburger-icon span:nth-of-type(2) {
+  width: 15px;
+}
+
+.shadow .menu-main-menu-container ul li a {
+  color: #687279;
+}
+
+.shadow nav .hamburger .hamburger-icon span,
+.error404 nav .hamburger .hamburger-icon span {
+  background-color: #74cf0b;
+}
+
+@media screen and (max-width: 1024px) {
+  nav .menu-main-menu-container,
+  nav .donate {
+    display: none;
+  }
+
+  nav .hamburger {
+    display: block;
+  }
+}

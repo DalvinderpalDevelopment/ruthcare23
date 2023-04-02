@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  font-family: "Poppins", sans-serif;
+}
+
+body h1 {
+  font-size: 48px;
+}
+
+body h2 {
+  font-size: 36px;
+}
+
+body h3 {
+  font-size: 24px;
+}
+
+body h4 {
+  font-size: 22px;
+}
+
+body h5 {
+  font-size: 20px;
+}
+
+body h6 {
+  font-size: 18px;
+}
+
+body p {
+  font-size: 18px;
+}
+
+.button {
+  width: 180px;
+  text-align: center;
+}
+
+.custom-shadow:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

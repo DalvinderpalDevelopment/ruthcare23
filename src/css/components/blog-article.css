@@ -1,0 +1,26 @@
+.article-single .share,
+.article-single .donate {
+  height: 150px;
+}
+
+.article-single .share a {
+  color: #ffffff;
+  font-size: 22px;
+}
+
+.article-single .donate {
+  background-color: #74cf0b;
+}
+
+.article-single .donate button {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .article-single .container .article-text {
+    padding-right: 25px !important;
+  }
+}

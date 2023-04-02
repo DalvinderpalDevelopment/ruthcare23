@@ -1,0 +1,7 @@
+.about-content .col p:has(img) {
+  text-align: center;
+}
+
+.about-content .col p img {
+  border-radius: 5px;
+}

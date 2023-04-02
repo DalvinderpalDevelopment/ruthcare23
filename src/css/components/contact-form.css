@@ -1,0 +1,31 @@
+.contact-form .container {
+  background-color: #74cf0b;
+}
+
+.contact-form .container .form {
+  width: 100%;
+}
+
+.contact-form .container button {
+  color: white;
+  background-color: #000000;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+
+.contact-form .container button:hover {
+  color: #000000;
+  background-color: transparent;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-form .container .form {
+    width: 65%;
+  }
+}

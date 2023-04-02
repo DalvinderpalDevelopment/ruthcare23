@@ -1,0 +1,64 @@
+.aims-carousel {
+  padding: 0 100px;
+}
+
+.aims-carousel .aim-content .aim-icon {
+  height: 150px;
+}
+
+.aims-carousel .aim-content .aim-icon img {
+  width: 70px;
+}
+
+.aims-carousel .aim-content .aim-text p {
+  color: #687279;
+}
+
+.aims-carousel .owl-dots {
+  display: none;
+}
+
+.aim .container .aims-carousel .owl-nav button {
+  position: absolute;
+  top: 45%;
+  font-size: 20px;
+  color: white;
+  background-color: #ffdc00;
+  padding: 2px 10px !important;
+  border-radius: 50%;
+}
+
+.aim .aims-carousel .owl-nav button.owl-next {
+  right: 0;
+  margin-right: 35px;
+}
+
+.aim .aims-carousel .owl-nav button.owl-prev {
+  left: 0;
+  margin-left: 35px;
+}
+
+@media screen and (max-width: 1024px) {
+  .aims-carousel {
+    padding: 0 50px;
+  }
+
+  .aim .aims-carousel .owl-nav button.owl-next {
+    margin-right: 20px;
+  }
+
+  .aim .aims-carousel .owl-nav button.owl-prev {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .aims-carousel {
+    padding: 0 30px;
+  }
+
+  .aim .aims-carousel .owl-nav button.owl-next,
+  .aim .aims-carousel .owl-nav button.owl-prev {
+    display: none;
+  }
+}

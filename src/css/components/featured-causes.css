@@ -1,0 +1,6 @@
+.featured-causes .cause .cause-image img {
+  height: 250px;
+  object-fit: cover;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
