@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col col-12 col-md-6 col-lg-4 pb-3 px-4">
+            <div class="col col-12 col-md-6 col-lg-4 pb-4 px-4">
                 <div class="cause h-100 shadow rounded">
                     <div class="cause-image">
                         <?php echo $featured_cause_1_image; ?>
@@ -31,7 +31,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col col-12 col-md-6 col-lg-4 pb-3 px-4">
+            <div class="col col-12 col-md-6 col-lg-4 pb-4 px-4">
                 <div class="cause h-100 shadow rounded">
                     <div class="cause-image">
                         <?php echo $featured_cause_2_image; ?>
@@ -44,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col col-12 col-md-6 col-lg-4 pb-3 px-4">
+            <div class="col col-12 col-md-6 col-lg-4 pb-4 px-4">
                 <div class="cause h-100 shadow rounded">
                     <div class="cause-image">
                         <?php echo $featured_cause_3_image; ?>

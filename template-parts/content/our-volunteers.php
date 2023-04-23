@@ -17,7 +17,7 @@ $volunteers = get_posts($args);
             </div>
             <div class="volunteers-content col col-12 col-md-6 px-0">
                 <div class="volunteers-carousel owl-carousel d-flex justify-content-center p-5">
-                <?php foreach($volunteers as $volunteer) {
+                <?php foreach($volunteers as $volunteer):
                     $title = !empty($volunteer->post_title) ? '<p class="mb-0">Name: ' . $volunteer->post_title . '</p>' : '';
                     $role  = !empty(get_field('role', $volunteer->ID)) ? '<p>Role: ' . get_field('role', $volunteer->ID) . '</p>': '';
                     $facebook_link  = !empty(get_field('facebook_link', $volunteer->ID)) ? '<a href="' . get_field('facebook_link', $volunteer->ID) . '" target="_blank"><i class="fab fa-facebook" aria-label="Facebook page of volunteer"></i></a>' : '';
@@ -41,7 +41,7 @@ $volunteers = get_posts($args);
                             </div>
                         </div>
                     </div>';
-                } ?>
+                endforeach; ?>
                 </div>
             </div>
         </div>

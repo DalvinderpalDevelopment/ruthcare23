@@ -31,9 +31,9 @@
                                     ' . $date . ' 
                                 </div>
                                 <div class="article-category col-6 d-flex justify-content-end">';
-                                if($category) {
+                                if($category):
                                     echo '<span>' . $category[0]->name . '</span>';
-                                }
+                                endif;
                                 
                                 echo '</div>
                             </div>

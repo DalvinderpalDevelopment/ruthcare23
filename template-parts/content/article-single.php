@@ -1,5 +1,5 @@
 <section class="article-single px-4 p-md-0">
-    <?php if (have_posts()) { ?>
+    <?php if (have_posts()): ?>
     <div class="container pb-4 pt-5">
         <div class="row p-3">
             <div class="col col-12 text-center">
@@ -27,5 +27,5 @@
             </div>
         </div>
     </div>
-    <?php } ?>
+    <?php endif; ?>
 </section>

@@ -14,7 +14,7 @@
                         <i class="fas fa-phone"></i>
                         <a href="tel:+4402034325854" aria-label="Telephone number to contact charity">+44 (0) 2034325854</a>
                     </div>
-                    <div class="email pb-2">
+                    <div class="email pb-2 text-break">
                         <i class="fas fa-envelope"></i>
                         <a href="mailto:admin@ruthcarefoundation.com" aria-label="Email address to contact charity via email">admin@ruthcarefoundation.com</a>
                     </div>

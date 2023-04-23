@@ -42,7 +42,6 @@ $(function () {
       items: 3,
       loop: true,
       autoplay: true,
-      autoplayTimeout: 3000,
       animateOut: "fadeOut",
       autoplayHoverPause: true,
       nav: true,
@@ -63,19 +62,17 @@ $(function () {
         },
       },
     });
-    if ($(window).width() < 768) {
-      owl.owlCarousel("destroy");
-    } else {
-      owl.owlCarousel();
-    }
   }
 
   function articlesCarousel() {
     var owl = $(".articles-carousel");
+
     if (owl.hasClass("owl-carousel")) {
       owl.owlCarousel({
         items: 3,
         loop: true,
+        autoplay: true,
+        autoplayHoverPause: true,
         nav: true,
         navText: [
           "<i class='fa fa-chevron-left'></i>",

@@ -38,11 +38,11 @@ add_action('wp_enqueue_scripts', 'ruthcare23_enqueue_scripts_styles');
 
 //Defer scripts for site
 function ruthcare23_defer_scripts($tag, $handle, $src) {
-    if('owlcarousel-js' !== $handle) {
+    if('owlcarousel-js' !== $handle):
         return $tag;
-    } else {
+    else:
       return '<script src="' . $src . '" defer="defer" type="text/javascript"></script>';
-    }
+    endif;
 }
 add_filter('script_loader_tag', 'ruthcare23_defer_scripts', 10, 3);
 
@@ -55,7 +55,7 @@ function ruthcare23_ajax_contact_init(){
 add_action('init', 'ruthcare23_ajax_contact_init');
 
 //Register both Header and Footer nav menus for the site
-if (!function_exists('ruthcare23_register_nav_menu')) {
+if (!function_exists('ruthcare23_register_nav_menu')):
 
 	function ruthcare23_register_nav_menu(){
 		register_nav_menus( array(
@@ -64,7 +64,8 @@ if (!function_exists('ruthcare23_register_nav_menu')) {
 		) );
 	}
 	add_action('after_setup_theme', 'ruthcare23_register_nav_menu', 0);
-}
+
+endif;
 
 //Unregsiter tags from defualt post type
 function ruthcare23_unregister_post_tags() {
@@ -202,25 +203,27 @@ add_action( 'init', 'ruthcare23_register_articles_post_type' );
 //Function to limit excerpt for posts
 function excerpt($limit, $post_id = NULL) {
     $excerpt = explode(' ', get_the_excerpt($post_id), $limit);
-    if (count($excerpt)>=$limit) {
+    if (count($excerpt)>=$limit):
         array_pop($excerpt);
         $excerpt = implode(" ",$excerpt).'...';
-      } else {
+    else:
         $excerpt = implode(" ",$excerpt);
-      }       
-      $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
+    endif;      
+    $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
+    
     return $excerpt;
 }
 
 // Register contact form function to handle AJAX request.
-function ruthcare23_ajax_contact(){
+function ruthcare23_ajax_contact() {
  
   $messages = array();
   $errors = false;
   $status = false;
 
-  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (!check_ajax_referer( 'ruthcare23-contact-nonce', 'contact-security', false )) {
+  if ($_SERVER['REQUEST_METHOD'] == 'POST'):
+
+    if (!check_ajax_referer( 'ruthcare23-contact-nonce', 'contact-security', false )):
       $messages[] = array(
         'type' => 'danger',
         'message' => 'There was an issue with the form. Please try again later!'
@@ -228,52 +231,56 @@ function ruthcare23_ajax_contact(){
       
       $errors = true;
       
-    };
-    if (empty($_POST['name'])) {
+    endif;
+
+    if (empty($_POST['name'])):
       $messages[] = array(
         'type' => 'warning',
         'message' => 'Please provide your full name.'
       );
       
       $errors = true;
-    }
-    if(empty($_POST['email'])) {
+    endif;
+
+    if(empty($_POST['email'])):
        $messages[] = array(
         'type' => 'warning',
         'message' => 'Please provide an email address.'
       );
       
       $errors = true;
-    }
-    if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+    endif;
+
+    if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)):
       $messages[] = array(
         'type' => 'warning',
         'message' => 'The email address you have provided appears to be invalid. Please double check it.'
       );
       
       $errors = true;
-    }
-    if (empty($_POST['subject'])) {
+    endif;
+
+    if (empty($_POST['subject'])):
       $messages[] = array(
         'type' => 'warning',
         'message' => 'Please select a subject.'
       );
       
       $errors = true;
-    }
-    if (empty($_POST['message'])) {
+    endif;
+
+    if (empty($_POST['message'])):
       $messages[] = array(
         'type' => 'warning',
         'message' => 'Please enter a message.'
       );
       
       $errors = true;
-    }
+    endif;
 
-
-    if (!$errors) {
-      $to      = 'dalvinderpaldevelopment@gmail.com';
-      $subject = 'RuthCareFoundation Site Contact Form Request';
+    if (!$errors):
+      $to      = get_bloginfo('admin_email');
+      $subject = get_bloginfo('name') . ' Site Contact Form Request';
       $body    = 'From: ' . $_POST['name'] . '<br>';
       $body .= 'Email: ' . $_POST['email'] . '<br>';
       $body .= 'Subject: ' . $_POST['subject'] . '<br>';
@@ -288,7 +295,7 @@ function ruthcare23_ajax_contact(){
 
       $status = true;
    
-    }
+    endif;
 
     $response = array(
       'status' => $status,
@@ -298,7 +305,9 @@ function ruthcare23_ajax_contact(){
     echo json_encode($response);
 
     die();
-  }
+    
+  endif;
+
 }
 
 ?>

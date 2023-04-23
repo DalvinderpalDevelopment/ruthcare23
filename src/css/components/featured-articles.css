@@ -10,6 +10,10 @@
   border-top-left-radius: 5px;
 }
 
+.featured-articles .owl-carousel .owl-stage {
+  display: flex;
+}
+
 .featured-articles .article-info .article-meta svg {
   margin-right: 5px;
 }
